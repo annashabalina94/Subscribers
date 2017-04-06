@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		956380661E9681E00011D54A /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 956380651E9681E00011D54A /* DataViewController.m */; };
 		958B3E151E959FB8006F30FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 958B3E141E959FB8006F30FC /* main.m */; };
 		958B3E181E959FB8006F30FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 958B3E171E959FB8006F30FC /* AppDelegate.m */; };
 		958B3E1B1E959FB8006F30FC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 958B3E1A1E959FB8006F30FC /* ViewController.m */; };
 		958B3E1E1E959FB8006F30FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958B3E1C1E959FB8006F30FC /* Main.storyboard */; };
 		958B3E201E959FB8006F30FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 958B3E1F1E959FB8006F30FC /* Assets.xcassets */; };
 		958B3E231E959FB8006F30FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958B3E211E959FB8006F30FC /* LaunchScreen.storyboard */; };
+		958B3E341E95A5D3006F30FC /* Subscribers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 958B3E331E95A5D3006F30FC /* Subscribers.plist */; };
+		958B3E371E95ABB9006F30FC /* Subscribers.m in Sources */ = {isa = PBXBuildFile; fileRef = 958B3E361E95ABB9006F30FC /* Subscribers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		956380641E9681E00011D54A /* DataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
+		956380651E9681E00011D54A /* DataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
 		958B3E101E959FB8006F30FC /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		958B3E141E959FB8006F30FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		958B3E161E959FB8006F30FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +31,9 @@
 		958B3E1F1E959FB8006F30FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		958B3E221E959FB8006F30FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		958B3E241E959FB8006F30FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		958B3E331E95A5D3006F30FC /* Subscribers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Subscribers.plist; sourceTree = "<group>"; };
+		958B3E351E95ABB9006F30FC /* Subscribers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Subscribers.h; sourceTree = "<group>"; };
+		958B3E361E95ABB9006F30FC /* Subscribers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Subscribers.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +66,13 @@
 		958B3E121E959FB8006F30FC /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				958B3E2F1E95A1EA006F30FC /* Views */,
+				958B3E321E95A29C006F30FC /* Controllers */,
+				958B3E311E95A272006F30FC /* Models */,
+				958B3E301E95A230006F30FC /* Storyboards */,
 				958B3E161E959FB8006F30FC /* AppDelegate.h */,
 				958B3E171E959FB8006F30FC /* AppDelegate.m */,
-				958B3E191E959FB8006F30FC /* ViewController.h */,
-				958B3E1A1E959FB8006F30FC /* ViewController.m */,
-				958B3E1C1E959FB8006F30FC /* Main.storyboard */,
 				958B3E1F1E959FB8006F30FC /* Assets.xcassets */,
-				958B3E211E959FB8006F30FC /* LaunchScreen.storyboard */,
 				958B3E241E959FB8006F30FC /* Info.plist */,
 				958B3E131E959FB8006F30FC /* Supporting Files */,
 			);
@@ -77,6 +85,43 @@
 				958B3E141E959FB8006F30FC /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		958B3E2F1E95A1EA006F30FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		958B3E301E95A230006F30FC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				958B3E1C1E959FB8006F30FC /* Main.storyboard */,
+				958B3E211E959FB8006F30FC /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		958B3E311E95A272006F30FC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				958B3E331E95A5D3006F30FC /* Subscribers.plist */,
+				958B3E351E95ABB9006F30FC /* Subscribers.h */,
+				958B3E361E95ABB9006F30FC /* Subscribers.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		958B3E321E95A29C006F30FC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				956380641E9681E00011D54A /* DataViewController.h */,
+				956380651E9681E00011D54A /* DataViewController.m */,
+				958B3E1A1E959FB8006F30FC /* ViewController.m */,
+				958B3E191E959FB8006F30FC /* ViewController.h */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +184,7 @@
 			files = (
 				958B3E231E959FB8006F30FC /* LaunchScreen.storyboard in Resources */,
 				958B3E201E959FB8006F30FC /* Assets.xcassets in Resources */,
+				958B3E341E95A5D3006F30FC /* Subscribers.plist in Resources */,
 				958B3E1E1E959FB8006F30FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,6 +199,8 @@
 				958B3E1B1E959FB8006F30FC /* ViewController.m in Sources */,
 				958B3E181E959FB8006F30FC /* AppDelegate.m in Sources */,
 				958B3E151E959FB8006F30FC /* main.m in Sources */,
+				958B3E371E95ABB9006F30FC /* Subscribers.m in Sources */,
+				956380661E9681E00011D54A /* DataViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +357,7 @@
 				958B3E291E959FB8006F30FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

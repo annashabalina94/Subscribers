@@ -9,6 +9,8 @@
 #import "DataViewController.h"
 
 @interface DataViewController ()
+@property (strong, nonatomic) IBOutlet UIView *View;
+
 
 @property(nonatomic, strong) NSArray *subscribers;
 
@@ -19,7 +21,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"Subscribers"withExtension:@"plist"];
+    
+    self.subscribers = [NSArray arrayWithContentsOfURL:fileURL];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,20 +33,25 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-
-//Объявляем метод для чтения данных из плист файла
--(void)readData
-
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    //получим путь к этому файлу
-    NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"Subscribers"withExtension:@"plist"];
-    
-    // далее мы может создать массив используя данные из плист файла
-    self.subscribers = [NSArray arrayWithContentsOfURL:fileURL];
+    NSInteger count = [self.subscribers count];
+    return count;
 }
 
-
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *c;
+    c=[tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    UILabel *label;
+    NSInteger index = [indexPath row];
+    NSArray *person = self.subscribers[index];
+    c.textLabel.text=person[0];
+    label = (UILabel *)[c.contentView viewWithTag:1001];
+    label.text = person[1];
+    
+    return c;
+}
 
 
 /*
